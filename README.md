@@ -16,39 +16,39 @@ A felhasználó akár az alkalmazáson belül betudja jelölni milyen problémá
 ####Szaki profil
 
 1. Profil feltöltése
-	o fotó
-	o név
-	o szakterület
-	o elérhetőség
-	o munkaidő
-	o terület megjelölése ( Pl.: Szeged és környéke)
-	o Google / facebook bejelentkezés
+	fotó
+	név
+	szakterület
+	elérhetőség
+	munkaidő
+	terület megjelölése ( Pl.: Szeged és környéke)
+	Google / facebook bejelentkezés
 2.  Szaki publikus profil
-	o fentebb említett adatok megjelenítése
-	o értékelés és azok megjelenítése (komment illetve csillagrendszer)
+	fentebb említett adatok megjelenítése
+	értékelés és azok megjelenítése (komment illetve csillagrendszer)
 
 ####Felhasználói profil
 1.  Profil feltöltése: 
-	*fotó*
-	*név*
-	*telefonszám (nem publikus, csak mikor a visszaigazolás megtörtént a
-szakember felé, ez is választható)*
-	*terület megjelölése (Pl.: Szeged)*
-	*Kedvencek (szakik kedvencekhez adása)*
-	*Google/facebook bejelentkezés*
+	fotó
+	név
+	telefonszám (nem publikus, csak mikor a visszaigazolás megtörtént a
+szakember felé, ez is választható)
+	terület megjelölése (Pl.: Szeged)
+	Kedvencek (szakik kedvencekhez adása)
+	Google/facebook bejelentkezés
 
 ####Interakciók
 1. Szakemberek böngészése
 2. Üzenetküldő rendszer
 3. Értékelés
-	o törlés, szerkesztés
+	törlés, szerkesztés
 4. Szakember igénylés
-	o szakterület kiválasztása
-	o Probléma leírása
-	o megfelelő időpontok bejelölése
-	o Környéken lévő szakembernek értesítés küldése
+	szakterület kiválasztása
+	Probléma leírása
+	megfelelő időpontok bejelölése
+	Környéken lévő szakembernek értesítés küldése
 5. Szakember visszaigazolás
 6. Felhasználó visszaigazolás
 7. Fizetős rendszer
-	o Szakik előresorolása keresésnél
-	o Tényleges pénzforgalom nélkül 
+	Szakik előresorolása keresésnél
+	Tényleges pénzforgalom nélkül 
