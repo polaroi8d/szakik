@@ -1,6 +1,9 @@
 #Szakik.hu
 ####Projektfeladat - Adatbázis alapú rendszerek - 2016 tavasz
 
+[logo]: https://files.slack.com/files-pri/T0CBEUTPG-F0MA78A5T/szakik.png "Szakik.hu logo"
+[Imgur](http://i.imgur.com/2KikUTm.png)
+
 ###Csoporttagok
 1. Tóth Dávid – TODVAAT.SZE (csoportvezető)
 2. Orbán Levente – ORLVAAT.SZE
@@ -15,7 +18,7 @@ A felhasználó akár az alkalmazáson belül betudja jelölni milyen problémá
 ###Funkciók
 ####Szaki profil
 
-1. Profil feltöltése
+1. Profil feltöltése:
 	fotó
 	név
 	szakterület
@@ -23,7 +26,7 @@ A felhasználó akár az alkalmazáson belül betudja jelölni milyen problémá
 	munkaidő
 	terület megjelölése ( Pl.: Szeged és környéke)
 	Google / facebook bejelentkezés
-2.  Szaki publikus profil
+2.  Szaki publikus profil:
 	fentebb említett adatok megjelenítése
 	értékelés és azok megjelenítése (komment illetve csillagrendszer)
 
@@ -40,15 +43,15 @@ szakember felé, ez is választható)
 ####Interakciók
 1. Szakemberek böngészése
 2. Üzenetküldő rendszer
-3. Értékelés
+3. Értékelés:
 	törlés, szerkesztés
-4. Szakember igénylés
+4. Szakember igénylés:
 	szakterület kiválasztása
 	Probléma leírása
 	megfelelő időpontok bejelölése
 	Környéken lévő szakembernek értesítés küldése
 5. Szakember visszaigazolás
 6. Felhasználó visszaigazolás
-7. Fizetős rendszer
+7. Fizetős rendszer:
 	Szakik előresorolása keresésnél
 	Tényleges pénzforgalom nélkül 
