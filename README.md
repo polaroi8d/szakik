@@ -1,8 +1,9 @@
 #Szakik.hu
 ####Projektfeladat - Adatbázis alapú rendszerek - 2016 tavasz
 
-[logo]: https://files.slack.com/files-pri/T0CBEUTPG-F0MA78A5T/szakik.png "Szakik.hu logo"
-[Imgur](http://i.imgur.com/2KikUTm.png)
+![alt text][logo]
+[logo]: http://i.imgur.com/2KikUTm.png "Szakik.hu logo"
+
 
 ###Csoporttagok
 1. Tóth Dávid – TODVAAT.SZE (csoportvezető)
