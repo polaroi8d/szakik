@@ -56,6 +56,3 @@ szakember felé, ez is választható)
 7. Fizetős rendszer:
 	Szakik előresorolása keresésnél
 	Tényleges pénzforgalom nélkül 
-
-
-Véleményeket, feature requesteket várunk :)
