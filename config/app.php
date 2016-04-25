@@ -152,6 +152,7 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+		Yajra\Oci8\Oci8ServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
