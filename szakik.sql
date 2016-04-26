@@ -74,7 +74,7 @@ INSERT INTO FELHASZNALO (F_ID, NEV, FELHASZNALONEV, JELSZO, CIM, varos_CIM, iran
    
 CREATE TABLE  "SZAKI" 
    (	"SZ_ID" NUMBER(*,0) NOT NULL ENABLE, 
-	"Munkanev" VARCHAR2(100) NOT NULL ENABLE, 
+	"MUNKANEV" VARCHAR2(100) NOT NULL ENABLE, 
 	"NEVE" VARCHAR2(40), 
 	"FELHASZNALONEV" VARCHAR2(20), 
 	"JELSZO" VARCHAR2(20), 
@@ -99,28 +99,28 @@ START WITH 1
 INCREMENT BY 1
 NOMAXVALUE;
 
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('1', 'Asztalos','Vida Sándor','vidas','56tg','+3670125478','@gmail.com','photos/aszta.jpg','Szeged','premium');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('2', 'Villany szerelő','Szőke Ádám ','szokea','54trg','+36704578545','szokea@gmail.com','','Szeged','premium');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('3', 'Vízvezeték szerelő','Molnár István','molnari','efs34','+36707896457','molnaris@gmail.com','','Szeged','premium');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('4', 'Gáz','Alpár Viktor','alparv','7uzhrtr','+36707554645','alprarvi@gmail.com','','Szeged','premium');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('5', 'Lakatos','Almási Dániel','almasid','34qwda','+36704457864','almasid@gmail.com','','Szeged','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('6', 'Esztergályos','Baranyai Gergő','baranyaig','asf32','+36707777777','eszterbar@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('7', 'Kulcs másoló','Baranyai Ágnes','baranyaia','i8ujz','+36706665612','agneska@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('8', 'Cipész','Bagi Krisztina','bagikrist','jmnhgbvf','+36202459678','krisztinabagi@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('9', 'Rendszergazda','Fazekas Márton','fazekasmart','3red','+36204563124','fazerkmarrt@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('10', 'Dajka','Fodor Hella','fodorhella','23fsdf','+36207986534','fodorhella@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('11', 'Asztalos','Fődi Dániel','fodidani','rfewsdf','+36204653214','fodidani@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('12', 'Kéményseprő','Futó Loránt','futolor','2rdfafs','+3620125364','futolorant@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('13', 'Bicikli szervízelő','Franyó Ádám','franyoad','23rdfasf','+3620698547','franyoadam@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('14', 'Műkörömépítő','Gál Gergő','galgerg','32rewsdf','+36203654212','galgergo@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('15', 'Fodrász','Füzi Imre','fulopi','8iujzh','+3620365215','fuziimere@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('16', 'Artista','Fülöp Ádám','adaminyo','2edas','+3620236524','fulopadam@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('17', 'Állattenyésztő','Görög Bernadett','bernadettg','3rse','+3620653256','gorogbernadett@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('18', 'Agrártechnikus','Kincses Fanni','kincsesf','3rfse','+36206363332','fannikincs@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('19', 'Halőr','Kocsir Réka','kocsirs','34erfs','+3620658752','kocsirrea@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('20', 'Biztonsági őr','Kókity Lilla','koktiya','23rfs','+36205236524','lillakoty@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('21', 'Hegesztő','Komár András','koviandras','54tgfsd','+3620325632','komarandri@gmail.com','','Kecskemét','normal');
-INSERT INTO SZAKIK (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('22', 'Takarító','Varga József','vargajozsi','novagyok','+3620632512','jozsefvarga@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('1', 'Asztalos','Vida Sándor','vidas','56tg','+3670125478','@gmail.com','photos/aszta.jpg','Szeged','premium');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('2', 'Villany szerelő','Szőke Ádám ','szokea','54trg','+36704578545','szokea@gmail.com','','Szeged','premium');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('3', 'Vízvezeték szerelő','Molnár István','molnari','efs34','+36707896457','molnaris@gmail.com','','Szeged','premium');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('4', 'Gáz','Alpár Viktor','alparv','7uzhrtr','+36707554645','alprarvi@gmail.com','','Szeged','premium');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('5', 'Lakatos','Almási Dániel','almasid','34qwda','+36704457864','almasid@gmail.com','','Szeged','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('6', 'Esztergályos','Baranyai Gergő','baranyaig','asf32','+36707777777','eszterbar@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('7', 'Kulcs másoló','Baranyai Ágnes','baranyaia','i8ujz','+36706665612','agneska@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('8', 'Cipész','Bagi Krisztina','bagikrist','jmnhgbvf','+36202459678','krisztinabagi@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('9', 'Rendszergazda','Fazekas Márton','fazekasmart','3red','+36204563124','fazerkmarrt@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('10', 'Dajka','Fodor Hella','fodorhella','23fsdf','+36207986534','fodorhella@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('11', 'Asztalos','Fődi Dániel','fodidani','rfewsdf','+36204653214','fodidani@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('12', 'Kéményseprő','Futó Loránt','futolor','2rdfafs','+3620125364','futolorant@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('13', 'Bicikli szervízelő','Franyó Ádám','franyoad','23rdfasf','+3620698547','franyoadam@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('14', 'Műkörömépítő','Gál Gergő','galgerg','32rewsdf','+36203654212','galgergo@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('15', 'Fodrász','Füzi Imre','fulopi','8iujzh','+3620365215','fuziimere@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('16', 'Artista','Fülöp Ádám','adaminyo','2edas','+3620236524','fulopadam@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('17', 'Állattenyésztő','Görög Bernadett','bernadettg','3rse','+3620653256','gorogbernadett@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('18', 'Agrártechnikus','Kincses Fanni','kincsesf','3rfse','+36206363332','fannikincs@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('19', 'Halőr','Kocsir Réka','kocsirs','34erfs','+3620658752','kocsirrea@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('20', 'Biztonsági őr','Kókity Lilla','koktiya','23rfs','+36205236524','lillakoty@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('21', 'Hegesztő','Komár András','koviandras','54tgfsd','+3620325632','komarandri@gmail.com','','Kecskemét','normal');
+INSERT INTO SZAKI (SZ_ID, Munkanev, NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) VALUES ('22', 'Takarító','Varga József','vargajozsi','novagyok','+3620632512','jozsefvarga@gmail.com','','Kecskemét','normal');
 
 CREATE TABLE  "ERTEKELES" 
    (	"E_ID" NUMBER(4,0) NOT NULL ENABLE, 
