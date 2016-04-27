@@ -1,27 +1,58 @@
-# Laravel PHP Framework
+#Szakik.hu
+####Projektfeladat - Adatbázis alapú rendszerek - 2016 tavasz
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+![alt text][logo]
+[logo]: http://i.imgur.com/2KikUTm.png "Szakik.hu logo"
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+###Csoporttagok
+1. Tóth Dávid – TODVAAT.SZE (csoportvezető)
+2. Orbán Levente – ORLVAAT.SZE
+3. Varga Dániel – VADVAAT.SZE
 
-## Official Documentation
+###Leírás
+Online szakember kereső.
+A felhasználó a már előre beregisztrált (környéken dolgozó) szakemberek közül tud
+választani. A szakember saját profilján megtudja adni képesítését (mely területen dolgozik)elérhetőségét illetve munkaidejét.
+A felhasználó akár az alkalmazáson belül betudja jelölni milyen problémája, van és milyenidőintervallumon ér rá. Majd a környéken lévő, a szakemberek erről értesítést kapnak,visszajelezhetnek a számukra megfelelő időpontra, ha több illető visszajelez a felhasználóválaszthat a számára megfelelő szakember közül vagy telefonon felkeresheti.A munka megtörténte után a felhasználó értékelheti egy öt csillagos skálán a dolgozót.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+###Funkciók
+####Szaki profil
 
-## Contributing
+1. Profil feltöltése:
+	fotó
+	név
+	szakterület
+	elérhetőség
+	munkaidő
+	terület megjelölése ( Pl.: Szeged és környéke)
+	Google / facebook bejelentkezés
+2.  Szaki publikus profil:
+	fentebb említett adatok megjelenítése
+	értékelés és azok megjelenítése (komment illetve csillagrendszer)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+####Felhasználói profil
+1.  Profil feltöltése: 
+	fotó
+	név
+	telefonszám (nem publikus, csak mikor a visszaigazolás megtörtént a
+szakember felé, ez is választható)
+	terület megjelölése (Pl.: Szeged)
+	Kedvencek (szakik kedvencekhez adása)
+	Google/facebook bejelentkezés
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+####Interakciók
+1. Szakemberek böngészése
+2. Üzenetküldő rendszer
+3. Értékelés:
+	törlés, szerkesztés
+4. Szakember igénylés:
+	szakterület kiválasztása
+	Probléma leírása
+	megfelelő időpontok bejelölése
+	Környéken lévő szakembernek értesítés küldése
+5. Szakember visszaigazolás
+6. Felhasználó visszaigazolás
+7. Fizetős rendszer:
+	Szakik előresorolása keresésnél
+	Tényleges pénzforgalom nélkül 
