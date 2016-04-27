@@ -14,45 +14,29 @@ include 'fejlec.php';
 
 
 ?>
-
 <?php
 require 'loginform.php';
-
-if(isset($_POST['felhnev'])&&isset($_POST['jelszo'])){
+if(isset($_POST['felhnev'])&&isset($_POST['jelszo'])&&isset($_POST['tipus'])){
 	$username = $_POST['felhnev'];
 	$password = $_POST['jelszo'];
-	$query = "SELECT F_ID, JELSZO FROM FELHASZNALO WHERE FELHASZNALONEV = '" . $username . "'";
-
-	$stid = oci_parse($conn, $query);
-	oci_execute($stid);
-	
-	while (oci_fetch($stid)) {
-		if($password != oci_result($stid, 'JELSZO')){
-			echo 'Hibás felhasználónév vagy jelszó';
-		}else{
-			$_SESSION['user'] = $username;
-			header('Location: index.php'); 
-		}
+	$tipus = $_POST['tipus'];
+	if($tipus == 'szaki') {
+	$query = "SELECT * FROM SZAKI WHERE FELHASZNALONEV = '" . $username . "' and JELSZO='".$password."'";
+	} else if($tipus == 'felhasz') {
+	$query = "SELECT * FROM FELHASZNALO WHERE FELHASZNALONEV = '" . $username . "' and JELSZO='".$password."'";
 	}
 	
-}  /*} else if(isset($_POST['felhnev'])&&isset($_POST['jelszo'])){
-	$username = $_POST['felhnev'];
-	$password = $_POST['jelszo'];
-	$query = "SELECT SZ_ID, JELSZO FROM SZAKI WHERE FELHASZNALONEV = '" . $username . "'";
-
 	$stid = oci_parse($conn, $query);
 	oci_execute($stid);
-	
-	while (oci_fetch($stid)) {
-		if($password != oci_result($stid, 'JELSZO')){
-			echo 'Hibás felhasználónév vagy jelszó';
-		}else{
-			$_SESSION['user'] = $username;
+	$tmpcount = OCIFetch($stid);
+	if ($tmpcount==1){
+	 $count = OCIRowCount($stid);
+	   if ($count == 1) {
+		   $_SESSION['user'] = $username;
 			header('Location: index.php'); 
-		}
-	}
-	
-}*/
+	   } 
+	}else {echo 'Hibás jelszó vagy felhasználó név vagy rossz típus választás';}
+}
 ?>
 </div>
 </body>
