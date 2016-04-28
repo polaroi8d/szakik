@@ -5,6 +5,7 @@
         <li class="active"><a href="index.php">Kezdőoldal</a></li>
         <li class="last"><a href="browse.php">Böngészés</a></li>
         <li class="last"><a href="top.php">Legek</a></li>
+		 <li class="last"><a href="panasz.php">Panasz</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 	<?php
