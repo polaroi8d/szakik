@@ -1,8 +1,7 @@
 ﻿<?php session_start(); ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
+<?php include 'layout.php'; ?>
 </head>
 <body>
 
@@ -12,12 +11,19 @@ require 'core.inc.php';
 
 include 'fejlec.php';
 ?>
-<div id="regform2">
+<div id="regform2" align="center">
+			<div class="container">
+		  <div class="row">
+		    <div class="col-sm-5" id="miertreg"><h2>Miért regisztrálj?</h2>
+		    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+		    		aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		    		 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+		    		 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </div>
+		    <div class="col-sm-5"><?php require 'regform2.php'; ?></div>
+		  </div>
+		</div>
+
 <?php
-
-require 'regform2.php';
-
-
 if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 	$name = $_POST['teljesnev'];
 	$username = $_POST['felhnev'];
@@ -46,16 +52,10 @@ if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 		oci_execute($compiled);
 		echo 'Sikeres regisztráció';
 	}else{
-		echo 'Kérjük töltse ki a mezőket!';
+		echo '<div class="alert alert-danger" align="center" style="width: 300px;">Kérjük töltse ki a mezőket!</div>';
 	}
-	
-
-
-	
 }
-
 ?>
 </div>
-
 </body>
 </html>

@@ -1,8 +1,7 @@
 ﻿<?php session_start(); ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
+<?php include 'layout.php'; ?>
 </head>
 <body>
 
@@ -12,7 +11,7 @@ require 'core.inc.php';
 
 include 'fejlec.php';
 ?>
-<div id="regform">
+<div id="regform" align="center">
 <?php
 
 require 'regform.php';
@@ -48,7 +47,7 @@ if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 		oci_execute($compiled);
 		echo 'Sikeres regisztráció';
 	}else{
-		echo 'Kérjük töltse ki a mezőket!';
+		echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';
 	}
 	
 

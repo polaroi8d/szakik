@@ -1,19 +1,16 @@
 <?php session_start(); ?>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
+<?php include 'layout.php'; ?>
 </head>
 <body>
-<div id="content">
+
 <?php
 require 'connect.inc.php';
 require 'core.inc.php';
-
 include 'fejlec.php';
-
-
 ?>
+<div id="content" align="center">
 <?php
 require 'loginform.php';
 if(isset($_POST['felhnev'])&&isset($_POST['jelszo'])&&isset($_POST['tipus'])){
@@ -35,9 +32,10 @@ if(isset($_POST['felhnev'])&&isset($_POST['jelszo'])&&isset($_POST['tipus'])){
 		   $_SESSION['user'] = $username;
 			header('Location: index.php'); 
 	   } 
-	}else {echo 'Hibás jelszó vagy felhasználó név vagy rossz típus választás';}
+	}else {echo '<div align="center" class="alert alert-danger" style="width:300px;">Hibás jelszó vagy felhasználó név vagy rossz típus választás.<div>';}
 }
 ?>
+
 </div>
 </body>
 </html>
