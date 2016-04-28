@@ -19,15 +19,7 @@ oci_fetch($stid);
 if ($number_of_rows == 0)
 	{
 		echo 'Szaki van bejelentkezve!';
-	} else {echo 'Felhasznalo van bejelentkezve!';}
-
-	/*$ellen = oci_result($stid, 'FELHASZNALONEV');
-	if($ellen == $user) {
-		echo 'FELHASZNALO van bejelentkezve';
-	}*/
-  /*if($ellen != $user){
-	  echo 'Felhasználó';
-}	else echo 'Szaki van bejelentkezve'; */ }
+	} else {echo 'Felhasznalo van bejelentkezve!';} }
 
 ?>
 </div>
