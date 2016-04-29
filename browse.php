@@ -47,15 +47,15 @@ require 'connect.inc.php';
 		<div class="container">
 		  <div class="row">
 				<?php 
-				$sql = 'SELECT * FROM SZAKI';
-				$terulet_sql = 'SELECT DISTINCT MUNKATERULET FROM SZAKI';
-				$munkanev_sql = 'SELECT DISTINCT MUNKANEV FROM SZAKI';
-				$szakik = oci_parse($conn, $sql);
-				$terulet = oci_parse($conn, $terulet_sql);
-				$munkanev = oci_parse($conn, $munkanev_sql);
-				oci_execute($terulet);
-				oci_execute($szakik);
-				oci_execute($munkanev);
+					$sql = 'SELECT * FROM SZAKI';
+					$terulet_sql = 'SELECT DISTINCT MUNKATERULET FROM SZAKI';
+					$munkanev_sql = 'SELECT DISTINCT MUNKANEV FROM SZAKI';
+					$szakik = oci_parse($conn, $sql);
+					$terulet = oci_parse($conn, $terulet_sql);
+					$munkanev = oci_parse($conn, $munkanev_sql);
+					oci_execute($terulet);
+					oci_execute($szakik);
+					oci_execute($munkanev);
 				?>
 				
 
@@ -63,6 +63,7 @@ require 'connect.inc.php';
 				<h3>Szaki Kereső</h3>
 				<div class="form-group">
 					<form>
+
 					<label for="terulet">Település:</label>
 					<select class="form-control" 
 							name="terulet">
@@ -76,7 +77,9 @@ require 'connect.inc.php';
 							</option> 
 							<?php } ?>
 					</select>
+
 					</br>
+					
 					<label for="munkanev">Szakterületet:</label>
 					<select class="form-control" 
 							name="munkanev">
@@ -90,70 +93,80 @@ require 'connect.inc.php';
 							</option> 
 							<?php } ?>
 					</select>
+					
 					</br>
+					
 					<input type="submit" class="btn btn-success" value="Keresés"></input>
 					</form>
+				
 				</div>
 				</div>
 
 				<?php
-				if(empty($_GET) || (empty($_GET['terulet']) and empty($_GET['munkanev']) ) ) {
+					if(empty($_GET) || (empty($_GET['terulet']) and empty($_GET['munkanev']) ) ) {
 
-					while (oci_fetch($szakik)) {
+						while (oci_fetch($szakik)) {
 		
-					 ?>
-	        		<div class="col-md-3 col-xs-3">
-						<div class="panel panel-default">
-							<ul>
-							<img src="assets/img/szakik.png" style="width: 150px; height: 150px;">
-								<b><li><?php echo oci_result($szakik, 'NEVE'); ?></li></b>
-								<i><li><?php echo oci_result($szakik, 'MUNKANEV'); ?></li></i>
-								<li><?php echo oci_result($szakik, 'MUNKATERULET'); ?></li>
-								<button class="btn btn-info">Megtekint</button>
-							</ul>
-						</div>
-					</div>
+				?>
+			        		<div class="col-md-3 col-xs-3">
+								<div class="panel panel-default">
+									<ul>
+									<img src="assets/img/szakik.png" style="width: 150px; height: 150px;">
+										<b><li><?php echo oci_result($szakik, 'NEVE'); ?></li></b>
+										<i><li><?php echo oci_result($szakik, 'MUNKANEV'); ?></li></i>
+										<li><?php echo oci_result($szakik, 'MUNKATERULET'); ?></li>
+										<a 	role="button" 
+											class="btn btn-info" 
+											href="profile.php?sz_id=<?php echo oci_result($szakik, 'SZ_ID'); ?>"
+											>
+											Megtekint
+										</a>
+									</ul>
+								</div>
+							</div>
 				
 				<?php 
-					}
-				} elseif (!empty($_GET['terulet']) || !empty($_GET['munkanev'])) {
+						}
 
-					$kereses_lekerdez = "SELECT * FROM SZAKI WHERE ";
+					} elseif (!empty($_GET['terulet']) || !empty($_GET['munkanev'])) {
 
-											if(!empty($_GET['terulet'])) { 
-												$kereses_lekerdez .= "MUNKATERULET = '{$_GET['terulet']}' ";
-											}
+						$kereses_lekerdez = "SELECT * FROM SZAKI WHERE ";
 
-											if(!empty($_GET['terulet']) and !empty($_GET['munkanev'])) {
-												$kereses_lekerdez .= " AND ";
-											}
-											if (!empty($_GET['munkanev'])) {
-												$kereses_lekerdez .= "MUNKANEV = '{$_GET['munkanev']}'";
-											}
+												if(!empty($_GET['terulet'])) { 
+													$kereses_lekerdez .= "MUNKATERULET = '{$_GET['terulet']}' ";
+												}
+
+												if(!empty($_GET['terulet']) and !empty($_GET['munkanev'])) {
+													$kereses_lekerdez .= " AND ";
+												}
+												if (!empty($_GET['munkanev'])) {
+													$kereses_lekerdez .= "MUNKANEV = '{$_GET['munkanev']}'";
+												}
 
 
-					$kereses = oci_parse($conn, $kereses_lekerdez);
-					oci_execute($kereses);
+						$kereses = oci_parse($conn, $kereses_lekerdez);
+						oci_execute($kereses);
 
 
 					while (oci_fetch($kereses)) {
 		
-					 ?>
-	        		<div class="col-md-3 col-xs-3">
-						<div class="panel panel-default">
-							<ul>
-							<img src="assets/img/szakik.png" style="width: 150px; height: 150px;">
-								<b><li><?php echo oci_result($kereses, 'NEVE'); ?></li></b>
-								<i><li><?php echo oci_result($kereses, 'MUNKANEV'); ?></li></i>
-								<li><?php echo oci_result($kereses, 'MUNKATERULET'); ?></li>
-								<button class="btn btn-info">Megtekint</button>
-							</ul>
+				?>
+		        		<div class="col-md-3 col-xs-3">
+							<div class="panel panel-default">
+								<ul>
+								<img src="assets/img/szakik.png" style="width: 150px; height: 150px;">
+									<b><li><?php echo oci_result($kereses, 'NEVE'); ?></li></b>
+									<i><li><?php echo oci_result($kereses, 'MUNKANEV'); ?></li></i>
+									<li><?php echo oci_result($kereses, 'MUNKATERULET'); ?></li>
+									<button class="btn btn-info">Megtekint</button>
+								</ul>
+							</div>
 						</div>
-					</div>
 				<?php
-				} }
+					} 
+				}
 
-				 ?>
+				?>
 		    </div>
 		  </div>
 		</div>
