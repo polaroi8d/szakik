@@ -20,8 +20,10 @@
 		if ($number_of_rows == 0)
 	{
 		$a=1;
-	} else { $a=0; echo '
-		<li class="last"><a href="panasz.php">Panasz</a></li>';}
+	} else { $a=0; 
+	echo '<li class="last"><a href="panasz.php">Panasz</a></li>';
+	echo '<li class="last"><a href="hirdetesf.php">Igénylés</a></li>';
+	}
 	}else{
 		echo  '<li class="dropdown">';
         echo  '<a href="#" data-toggle="dropdown" class="dropdown-toggle">';
