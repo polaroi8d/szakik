@@ -8,12 +8,14 @@
 <?php
 require 'connect.inc.php';
 require 'core.inc.php';
-require 'panaszform.php';
 
 include 'fejlec.php';
 ?>
 <div id="panasz" align="center">
+
 <?php
+require 'panaszform.php';
+
 	if (isset($_SESSION['user'])){
 	$username = $_SESSION['user'];
 	$query = "SELECT F_ID FROM FELHASZNALO WHERE FELHASZNALONEV = '" . $username . "'";
