@@ -185,7 +185,7 @@ require 'connect.inc.php';
 
 										<input 	type="radio" 
 												name="pont" 
-												value="1">
+												value="5">
 												5
 									<br>
 							 		<label for="szoveg">Értékelés szövege:</label>
