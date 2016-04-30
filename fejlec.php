@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Kezdőoldal</a></li>
-        <li class="last"><a href="browse.php">Böngészés</a></li>
-        <li class="last"><a href="top.php">Legek</a></li>
+        <li id="index" class="last"><a href="index.php">Kezdőoldal</a></li>
+        <li id="bongeszes" class="last"><a href="browse.php">Böngészés</a></li>
+        <li id="legek" class="last"><a href="top.php">Legek</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 	<?php
@@ -21,8 +21,9 @@
 	{
 		$a=1;
 	} else { $a=0; 
-	echo '<li class="last"><a href="panasz.php">Panasz</a></li>';
-	echo '<li class="last"><a href="hirdetesf.php">Igénylés</a></li>';
+  echo '<li id="kedvenceim" class="last"><a href="kedvenceim.php">Kedvenceim</a></li>';
+	echo '<li id="panasz" class="last"><a href="panasz.php">Panasz</a></li>';
+	echo '<li id="igenyles" class="last"><a href="hirdetesf.php">Igénylés</a></li>';
 	}
 	} else {
 		echo  '<li class="dropdown">';
