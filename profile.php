@@ -92,9 +92,13 @@ require 'connect.inc.php';
 								<?php
 								
 								$szaki_id = oci_result($szaki, 'SZ_ID');
-								
+								$kedvenc_jog_sql = "SELECT * FROM FELHASZNALO WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
+								$kedvenc_jog = oci_parse($conn, $kedvenc_jog_sql);
+								oci_execute($kedvenc_jog);
+
 								//Kedvencekhez adás/törlés
 			if (isset($_SESSION['user'])){
+								if(oci_fetch($kedvenc_jog)){
 									$kedvenc_sql = "SELECT * FROM KEDVENCEK WHERE SZ_ID= {$_GET['sz_id']} AND F_ID=$fi_id";
 									$kedvenc = oci_parse($conn, $kedvenc_sql);
 									oci_execute($kedvenc);
@@ -119,7 +123,7 @@ require 'connect.inc.php';
 					<div class="col-md-6">
 						<img src="assets/img/szakik.png" style="width: 250px; height: 250px; float: right; ">
 					</div>
-					<?php } ?>
+					<?php } } ?>
 
 					<div class="col-md-12">
 						<h3>Értékelések:</h3>
@@ -151,7 +155,9 @@ require 'connect.inc.php';
 								    <b><?php echo oci_result($ertekeles, 'PONT'); ?> </b> pontos
 								    <?php
 									    if (isset($_SESSION['user'])){
+									    if(oci_fetch($kedvenc_jog)) {
 									    	if ($ertekelt_f_id == $fi_id) {
+									    
 									 ?>
 
 									 <a ng-click="editdata"
@@ -166,7 +172,7 @@ require 'connect.inc.php';
 									 	>
 									 	 &nbsp;Törlés&nbsp; 
 									 </a>
-									 <?php } } ?>
+									 <?php } } } ?>
 								    </div>
 								    <div class="panel-body"><?php echo oci_result($ertekeles, 'SZOVEG'); ?></div>
 								  </div>
@@ -238,7 +244,7 @@ require 'connect.inc.php';
 							//EDDIG TART AZ ÉRTÉKELÉS
 		
 						if(isset($_SESSION['user'])){
-
+							if(oci_fetch($kedvenc_jog)) {
 						 ?>
 						 <h4>Értékelje Ön is:</h4>
 							<form class="form-group">
@@ -286,7 +292,7 @@ require 'connect.inc.php';
 						 
 						</div>
 						
-						<?php }
+						<?php } }
 						 	?>
 						 	</div>
 				<?php
