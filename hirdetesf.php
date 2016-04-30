@@ -1,16 +1,13 @@
 <?php session_start(); 
 require 'connect.inc.php';
-
 ?>
 <html>
 <head>
 <?php include 'layout.php'; ?>
 </head>
 <body>
-
 <?php
 require 'core.inc.php';
-
 include 'fejlec.php';
 ?>
 <script type="text/javascript">
@@ -20,10 +17,8 @@ include 'fejlec.php';
 		<div class="container">
 		<div id="profil">
 		  <div class="row">
-
 			<div id="hirdetesf" align="center">
 			<?php require 'hirdetesform.php'; ?>
-
 				<?php
 				// megnézem, hogy felhasználó van-e bejelentkezve, ha igen my_infoba beleírom annak F_IDját
 					if (isset($_SESSION['user'])){
@@ -48,12 +43,11 @@ include 'fejlec.php';
 					oci_bind_by_name($compiled, ':szoveg', $szoveg);
 					oci_bind_by_name($compiled, ':id', $my_info);
 					oci_bind_by_name($compiled, ':munkakat', $munkakat);
-					//SQL kódot futatt az adatnázisba
+					//SQL kódot futatt az adatbázisba
 					oci_execute($compiled);
 					echo $sql;
 						echo 'Sikeres igénylés!';
 					} else {echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';} }
-					
 					}
 				?>
 				</div>

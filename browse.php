@@ -60,19 +60,15 @@ require 'connect.inc.php';
 					oci_execute($szakik);
 					oci_execute($munkanev);
 				?>
-				
-
 				<div id="kereses">
 				<h3>Szaki Kereső</h3>
 				<div class="form-group">
 					<form>
-
 					<label for="terulet">Település:</label>
 					<select class="form-control" 
 							name="terulet">
 							<option></option>
 							<?php while (oci_fetch($terulet)) {	 ?>
-
 							<option 
 									value= <?php echo oci_result($terulet, 'MUNKATERULET'); ?> 
 									>
@@ -80,36 +76,27 @@ require 'connect.inc.php';
 							</option> 
 							<?php } ?>
 					</select>
-
 					</br>
-					
 					<label for="munkanev">Szakterületet:</label>
 					<select class="form-control" 
 							name="munkanev">
 							<option></option>
-							<?php while (oci_fetch($munkanev)) {	 ?>
-
+							<?php while (oci_fetch($munkanev)) { ?>
 							<option 
 									value= <?php echo oci_result($munkanev, 'MUNKANEV'); ?> 
 									>
-										<?php echo oci_result($munkanev, 'MUNKANEV'); ?>
+									<?php echo oci_result($munkanev, 'MUNKANEV'); ?>
 							</option> 
 							<?php } ?>
 					</select>
-					
 					</br>
-					
 					<input type="submit" class="btn btn-success" value="Keresés"></input>
 					</form>
-				
 				</div>
 				</div>
-
 				<?php
 					if(empty($_GET) || (empty($_GET['terulet']) and empty($_GET['munkanev']) ) ) {
-
 						while (oci_fetch($szakik)) {
-		
 				?>
 			        		<div class="col-md-3 col-xs-3">
 								<div class="panel panel-default">
@@ -127,7 +114,6 @@ require 'connect.inc.php';
 									</ul>
 								</div>
 							</div>
-				
 				<?php 
 						}
 

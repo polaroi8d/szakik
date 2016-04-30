@@ -1,6 +1,6 @@
 ﻿<nav class="navbar navbar-inverse" id="myNavbar" role="navigation">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li id="index" class="last"><a href="index.php">Kezdőoldal</a></li>
         <li id="bongeszes" class="last"><a href="browse.php">Böngészés</a></li>
@@ -25,7 +25,7 @@
 	echo '<li id="panasz" class="last"><a href="panasz.php">Panasz</a></li>';
 	echo '<li id="igenyles" class="last"><a href="hirdetesf.php">Igénylés</a></li>';
 	}
-	}else{
+	} else {
 		echo  '<li class="dropdown">';
         echo  '<a href="#" data-toggle="dropdown" class="dropdown-toggle">';
         echo  '<span class="glyphicon glyphicon-user"></span> Regisztráció <b class="caret"></b></a>';

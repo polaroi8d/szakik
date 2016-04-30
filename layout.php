@@ -37,6 +37,9 @@ body {
 	border-radius: 10px;
 	width: 300px;
 }
+nav {
+	background-color: blue;
+}
 
 #leftbar {
 	background-color:  rgba(255,255,255,0.8);
@@ -49,5 +52,10 @@ body {
 	border-radius: 5px;
 	margin: 10px;
 	padding: 30px;
+}
+
+#myNavbar {
+	margin-top: -19px;
+	background-color: rgba(255,255,255,0.8);
 }
 </style>
