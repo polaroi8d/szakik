@@ -1,26 +1,21 @@
 <?php session_start(); 
 require 'connect.inc.php';
-
 ?>
 <html>
 <head>
 <?php include 'layout.php'; ?>
 </head>
 <body>
-
 <?php
 require 'core.inc.php';
-
 include 'fejlec.php';
 ?>
 	<div class"index">
 		<div class="container">
 		<div id="profil">
 		  <div class="row">
-
 			<div id="hirdetesf" align="center">
 			<?php require 'hirdetesform.php'; ?>
-
 				<?php
 				// megnézem, hogy felhasználó van-e bejelentkezve, ha igen my_infoba beleírom annak F_IDját
 					if (isset($_SESSION['user'])){
@@ -50,7 +45,6 @@ include 'fejlec.php';
 					echo $sql;
 						echo 'Sikeres igénylés!';
 					} else {echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';} }
-					
 					}
 				?>
 				</div>
