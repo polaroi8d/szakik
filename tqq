@@ -1,0 +1,477 @@
+[33mcommit 02010c16473ea83aea5702e4eedcdf3637a032ff[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sat Apr 30 16:51:14 2016 +0200
+
+    utf8 charset fixed on hirdetesform.php
+
+[33mcommit 944b11db68e4784fd7ac71598f1b2196de394487[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sat Apr 30 16:32:24 2016 +0200
+
+    Edited the position of navigation bar.
+
+[33mcommit 2889f124d7e71c3e788dc6cd42868475abcc40ad[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Fri Apr 29 23:37:07 2016 +0200
+
+    1 to 5
+
+[33mcommit f57b3fe6ac11c75ec6996bdc817d1a0ac3684ac5[m
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Fri Apr 29 23:22:22 2016 +0200
+
+    Ertekeles irasa, kedvencekhez adas/torles
+
+[33mcommit b74dad8df41a5fd36eeb98fd16c77c17cd62a1a2[m
+Merge: 0560742 3249c85
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Fri Apr 29 16:23:14 2016 +0200
+
+    Merge pull request #8 from polaroi8d/Profile
+    
+    Megjelenito profil elkeszitve es kisebb browse.php modositasok
+
+[33mcommit 3249c8511572e196a22e3bc2604bc12dd536cd7b[m
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Fri Apr 29 16:17:23 2016 +0200
+
+    Megjelenito profil  elkeszitve es kisebb browse.php modositasok
+
+[33mcommit 0560742db09da2195d85d84351046f995e6fde35[m
+Merge: 11c5d76 fea43c0
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Fri Apr 29 13:57:03 2016 +0200
+
+    Merge branch 'master' of https://github.com/polaroi8d/szakik
+    
+    Szakik bongeszesse
+
+[33mcommit 11c5d761ffd48fc09d72c2186f96d13a387fc525[m
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Fri Apr 29 13:43:02 2016 +0200
+
+    Szakik bongeszese elkeszult
+
+[33mcommit fea43c0ed990d093373056a7e319d73addf62647[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Fri Apr 29 10:51:47 2016 +0200
+
+    Felhasználó szaki igénylése adatbázisba
+
+[33mcommit ed6b51f7e4498dc7a33f6f535957fcc14185a8e5[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Thu Apr 28 19:08:05 2016 +0200
+
+    fejléc update
+
+[33mcommit 6cf8e5f8c2d7940100584d3ef7ac3530849cdbc7[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Thu Apr 28 18:19:29 2016 +0200
+
+    felesleges sorok
+
+[33mcommit 20b9d7299f39657b8063782cc45382e427ea3526[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Thu Apr 28 18:15:50 2016 +0200
+
+    ellenőrzés szaki-e vagy nem
+
+[33mcommit 9fd95392cf9520781173183b4d62ee62eef534ea[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Thu Apr 28 16:07:57 2016 +0200
+
+    panasz feature felhasználónak
+
+[33mcommit 8dce7cd6928162a904baae07de8de071e2a437e4[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Thu Apr 28 02:42:48 2016 +0200
+
+    Style.css athelyezve assets/css mappaba.
+
+[33mcommit 6dbf3767fb7e5b9b3e9a95587d3e5e004e49cdef[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Thu Apr 28 02:40:42 2016 +0200
+
+    Layout edit w/ bootstrap.
+
+[33mcommit baedc56e923b7aa1b93dc2207011a8da779148f6[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Thu Apr 28 00:09:24 2016 +0200
+
+    register
+
+[33mcommit 7bb453ffea0659512e6192b77059def3325fc9a9[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Wed Apr 27 23:46:04 2016 +0200
+
+    login
+
+[33mcommit 8d6fe9ec8b7304c94aadbf0b159283653439d721[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Wed Apr 27 20:36:55 2016 +0200
+
+    PHP
+
+[33mcommit 550cf94c234940e2cccdbd6729c34f50da5236c1[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Wed Apr 27 20:35:49 2016 +0200
+
+    PURE PHP
+
+[33mcommit cfda0b8a10ec33f70e384c8074dcf296980ebaac[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Wed Apr 27 15:18:57 2016 +0200
+
+    Create README.md
+
+[33mcommit c84cba42fae235052e12d08f01fbb47ce8224d49[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Wed Apr 27 15:18:44 2016 +0200
+
+    Deleted Laravel ReadME...
+
+[33mcommit c263899c09b6ecc3217c767fa044a7a83387973c[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Wed Apr 27 15:15:30 2016 +0200
+
+    laravel readme deleted
+
+[33mcommit dbce9197597aa8951121f773e0c51b0102cdd0e1[m
+Merge: e2acb9b 9e12960
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Tue Apr 26 21:43:19 2016 +0200
+
+    Merge branch 'master' of github.com:polaroi8d/szakik into DaniBranch
+
+[33mcommit e2acb9b5563a00b97ea6a9f71511fce202d8aad7[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Tue Apr 26 21:41:45 2016 +0200
+
+    Elírás volt
+
+[33mcommit 9e1296055b0f67843952d5221f1f974810baa9f1[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Apr 26 09:04:30 2016 +0200
+
+    Deleted .bundle/config
+
+[33mcommit 649e94a96fb05dec2e059e23ffeb556c072e119f[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Apr 26 09:02:32 2016 +0200
+
+    Deleted old database tester files.
+
+[33mcommit def83cbee6500186ab9d3b53500ece689876a0bb[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Mon Apr 25 23:37:58 2016 +0200
+
+    orac
+
+[33mcommit ba124fd7ce6121c49edbe43e7bfa3006da568e0c[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Mon Apr 25 23:33:53 2016 +0200
+
+    data
+
+[33mcommit 26df498df06fbab243978e1a52ae925fa8ba8d86[m
+Merge: d4c39ba 6f9d5a3
+Author: David Toth <h359493@stud.u-szeged.hu>
+Date:   Mon Apr 25 18:04:17 2016 +0200
+
+    Merge branch 'master' of https://github.com/polaroi8d/szakik
+
+[33mcommit d4c39ba6d5a61d9201246b3920a7862b51a30d04[m
+Author: David Toth <h359493@stud.u-szeged.hu>
+Date:   Mon Apr 25 18:00:34 2016 +0200
+
+    Oracle DB csatlakozasi lehetoseg
+
+[33mcommit 6f9d5a311492ac3f8c4b6da47b0895114d87b27c[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sat Apr 23 18:44:56 2016 +0200
+
+    1.2
+
+[33mcommit e207becbcf82a6e6c47795669a3bebc0702ffeaa[m
+Merge: 9f8ffb5 a418179
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sat Apr 23 18:26:05 2016 +0200
+
+    szakik.sql feltöltése adatokkal..
+
+[33mcommit 9f8ffb5eb41e746fc281bbdf1306b91a330d0766[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sat Apr 23 18:22:08 2016 +0200
+
+    sql feltöltő script, adatokkal kiegészítve...
+
+[33mcommit a41817915a35cdd482a5956d06751dbc5855d399[m
+Merge: 818da17 ccf444f
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sat Apr 23 15:58:44 2016 +0200
+
+    Merge pull request #7 from polaroi8d/DaniBranch
+    
+    SQL javítások
+
+[33mcommit ccf444f924867defe76d79f3903f2ec8596848b8[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Fri Apr 22 15:23:56 2016 +0200
+
+    SQL javítások
+
+[33mcommit 818da173b7d98d5bf77ba3cfbe42c16ceb24e632[m
+Merge: 65108ae ad754de
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Fri Apr 22 15:21:43 2016 +0200
+
+    Merge branch 'asdasd' of github.com:polaroi8d/szakik
+
+[33mcommit 65108aec06dc8578ff5e4c223297beb0bff06492[m
+Author: David Toth <h359493@stud.u-szeged.hu>
+Date:   Wed Apr 13 11:30:51 2016 +0200
+
+    Upload laravel framework
+
+[33mcommit 903645b26b945efeeb1ab39e4240a3cd8812ed4c[m
+Author: David Toth <h359493@stud.u-szeged.hu>
+Date:   Wed Apr 13 11:25:52 2016 +0200
+
+    delet feature requests..
+
+[33mcommit ea358fbc699d536113dd7041909d19f8c32d6c58[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Apr 12 15:20:37 2016 +0200
+
+    Delete initial commit files
+
+[33mcommit ad754de2388080d386418a9b3f232b19f2e3e1c6[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 14:38:50 2016 +0200
+
+    login
+
+[33mcommit 1b138efb7c8ecfe7d688852283c542865c7ce27d[m
+Merge: 3ebf10e a0ec81b
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sun Apr 10 14:23:11 2016 +0200
+
+    Merge pull request #6 from polaroi8d/asdasd
+    
+    Register form
+
+[33mcommit 3ebf10e4c2133be6fe41a394db17dd31d1a02ca5[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sun Apr 10 14:22:17 2016 +0200
+
+    delet szaki.sql
+
+[33mcommit a0ec81b60d6a8527c4d6695f67ce15d22ef02350[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 12:43:35 2016 +0200
+
+    UTF-8
+
+[33mcommit fd3c2747d540d292714afcc0d7813cdec1cdc8e4[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 10:49:20 2016 +0200
+
+    pár alap, ezzel nekem megy az adatbázisba írás
+
+[33mcommit b219d25ccbc3e6ff70e2d499bf49da3d206c6691[m
+Merge: 5d9d280 861c523
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sun Apr 10 10:42:03 2016 +0200
+
+    Merge pull request #5 from polaroi8d/asdasd
+    
+    Adatbázis csatlakozó php
+
+[33mcommit 861c523e391a5f705125edabb1f95565afad4974[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 10:05:39 2016 +0200
+
+    Scriptbe jelzett 1-2 hibát ebbe kivettem elvileg a hibás triggereket, de azért a régi is maradjon ott
+
+[33mcommit c198a3ef597b5982f746193ccb3d744a87106d93[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 10:00:25 2016 +0200
+
+    PHP ext mappába oracle 11 expresshez
+
+[33mcommit b491ece7df5c1e951be27458e0087208790aa94f[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Sun Apr 10 09:55:12 2016 +0200
+
+    Adatbázis csatlakozó php
+
+[33mcommit 5d9d280dc19707d1a5a51030140f06f93193f16e[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Wed Apr 6 08:07:53 2016 +0200
+
+    david cuccainak törlése
+
+[33mcommit 93690f6f9d53bcc5609d58912f9bec3e076f01b4[m
+Merge: 497e059 0b6cf48
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Tue Apr 5 16:06:25 2016 +0200
+
+    Merge branch 'master' of github.com:polaroi8d/szakik
+
+[33mcommit 497e059576cab621505bee0787d6f62baf304fb3[m
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Tue Apr 5 16:05:34 2016 +0200
+
+    Proba
+
+[33mcommit 1078e402505ffec9a79f26bb8c28033bec8d9e88[m
+Author: grimyboy <h359493@stud.u-szeged.hu>
+Date:   Tue Apr 5 15:53:27 2016 +0200
+
+    Proba1
+
+[33mcommit 0b6cf48498c5f216b7e853d3c0ec15d294fbc806[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Apr 5 13:39:07 2016 +0200
+
+    Dani próbáinak törlése.
+
+[33mcommit fc5dc34e9b93ada335cb52fc56fabfde3eb15f49[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Tue Apr 5 13:28:23 2016 +0200
+
+    teszt
+
+[33mcommit f8c1db486ac13bf1fefbcf7caa1d5b5024ba10ab[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Mon Apr 4 21:29:38 2016 +0200
+
+    asdasd
+
+[33mcommit 8c7e4fc6b761704b6310eef15f24f31f57b0da54[m
+Merge: 41183c7 1ed848c
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Mon Apr 4 21:29:15 2016 +0200
+
+    Merge branch 'master' of https://github.com/polaroi8d/szakik
+
+[33mcommit 1ed848c84c0c0a8ae6f47e773621dcc8e8d1b6ca[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Mon Apr 4 21:25:30 2016 +0200
+
+    help the others work
+
+[33mcommit bf30194b2e097b091012bad20258e4476e6706bb[m
+Merge: 123063c 96fc1dd
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Mon Apr 4 21:23:36 2016 +0200
+
+    delete files
+
+[33mcommit 123063c390e4f5523214f9c166161835f9fff2cd[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Mon Apr 4 21:22:50 2016 +0200
+
+    windows api injection
+
+[33mcommit 41183c7bc87a69512260890f4aa928d5a721eb9f[m
+Author: varga04 <varga.danielr@gmail.com>
+Date:   Mon Apr 4 18:39:57 2016 +0200
+
+    asdasdasd
+    
+    Signed-off-by: varga04 <varga.danielr@gmail.com>
+
+[33mcommit 96fc1ddcb27bd4fd985d1bd85bc91567ef23cd03[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Thu Mar 31 14:37:48 2016 +0200
+
+    Deleted all Ruby files.
+
+[33mcommit 41e505023d810d737386db48779daf312c1a22c7[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Wed Mar 30 10:25:46 2016 +0200
+
+    Weclome index generated
+
+[33mcommit 70188ddbf0fa6b49f194275a16443f726dda5a85[m
+Merge: 3af1f02 235569d
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Mar 15 14:27:42 2016 +0100
+
+    Merge pull request #3 from polaroi8d/levente
+    
+    Levente
+
+[33mcommit 235569d1b40cad2cd4ce4b38c64cbfece65209ac[m
+Merge: 0556ad4 3af1f02
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Mar 15 14:21:39 2016 +0100
+
+    szakik.sql modositas
+
+[33mcommit 0556ad4a5778292af8b6943aa3ae900f8d441178[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Tue Mar 15 14:19:48 2016 +0100
+
+    szakik.sql modositas
+
+[33mcommit 3af1f0237de6dca5429c5ee89edfc752e6a2f92f[m
+Merge: 203c1e9 3adc27d
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Mon Mar 14 19:24:43 2016 +0100
+
+    Merge pull request #2 from polaroi8d/levente
+    
+    SQL létrehozó script fájl..
+
+[33mcommit 3adc27d5af1c4728560b982e9a965dcd1bcf398a[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Mon Mar 14 19:20:02 2016 +0100
+
+    SQL létrehozó script fájl..
+
+[33mcommit 203c1e976e6264d863f6111ed5a67a3d79d5e87d[m
+Merge: 5ec954f 29a3161
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Fri Mar 11 14:16:05 2016 +0100
+
+    Merge pull request #1 from polaroi8d/leventebranch
+    
+    README.md módosítva, hibák javítva.
+
+[33mcommit 29a31619b26c0657f51fbb44037432ef938b0111[m
+Author: orbanl <orban.levi.94@gmail.com>
+Date:   Fri Mar 11 14:12:22 2016 +0100
+
+    README.md módosítva, hibák javítva.
+
+[33mcommit 5ec954f6ec6a1759e9671598fe77ca255e6b8c98[m
+Author: Levente Orban <orbanl@inf.u-szeged.hu>
+Date:   Sun Feb 28 15:30:14 2016 +0100
+
+    Uploaded Ruby on rails framework.
+
+[33mcommit d79034b733d8a9746cdffaefdfca278475120b2d[m
+Author: orbanl <orban.levi.94@gmail.com>
+Date:   Mon Feb 15 13:55:50 2016 +0100
+
+    Add logo.png
+
+[33mcommit ab803b22c6f9341d446ecf090240050a979f4793[m
+Author: orbanl <orban.levi.94@gmail.com>
+Date:   Mon Feb 15 13:54:10 2016 +0100
+
+    Add logo.png
+
+[33mcommit 48190bdeb95ffde22e7cc4d8693cf00b2e0e8e73[m
+Author: orbanl <orban.levi.94@gmail.com>
+Date:   Mon Feb 15 13:46:38 2016 +0100
+
+    Modify read me file.
+
+[33mcommit 9376f4cf01f730189aaf603ee11d9267038687dc[m
+Author: orbanl <orban.levi.94@gmail.com>
+Date:   Mon Feb 15 13:16:46 2016 +0100
+
+    README.md file uploding.

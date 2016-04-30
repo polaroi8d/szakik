@@ -40,7 +40,7 @@ include 'fejlec.php';
 					oci_bind_by_name($compiled, ':szoveg', $szoveg);
 					oci_bind_by_name($compiled, ':id', $my_info);
 					oci_bind_by_name($compiled, ':munkakat', $munkakat);
-					//SQL kódot futatt az adatnázisba
+					//SQL kódot futatt az adatbázisba
 					oci_execute($compiled);
 					echo $sql;
 						echo 'Sikeres igénylés!';

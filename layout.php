@@ -37,6 +37,9 @@ body {
 	border-radius: 10px;
 	width: 300px;
 }
+nav {
+	background-color: blue;
+}
 
 #leftbar {
 	background-color:  rgba(255,255,255,0.8);

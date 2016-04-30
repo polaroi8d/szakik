@@ -24,7 +24,7 @@
 	echo '<li class="last"><a href="panasz.php">Panasz</a></li>';
 	echo '<li class="last"><a href="hirdetesf.php">Igénylés</a></li>';
 	}
-	}else{
+	} else {
 		echo  '<li class="dropdown">';
         echo  '<a href="#" data-toggle="dropdown" class="dropdown-toggle">';
         echo  '<span class="glyphicon glyphicon-user"></span> Regisztráció <b class="caret"></b></a>';
