@@ -43,6 +43,9 @@ require 'connect.inc.php';
 </head>
 <body>
 <?php include 'fejlec.php'; ?>
+<script type="text/javascript">
+	document.getElementById("bongeszes").className = "active";
+</script>
 	<div class"index">
 		<div class="container">
 		  <div class="row">
@@ -158,7 +161,12 @@ require 'connect.inc.php';
 									<b><li><?php echo oci_result($kereses, 'NEVE'); ?></li></b>
 									<i><li><?php echo oci_result($kereses, 'MUNKANEV'); ?></li></i>
 									<li><?php echo oci_result($kereses, 'MUNKATERULET'); ?></li>
-									<button class="btn btn-info">Megtekint</button>
+									<a 	role="button" 
+										class="btn btn-info" 
+										href="profile.php?sz_id=<?php echo oci_result($kereses, 'SZ_ID'); ?>"
+										>
+										Megtekint
+									</a>
 								</ul>
 							</div>
 						</div>

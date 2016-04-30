@@ -49,6 +49,7 @@ require 'connect.inc.php';
 		<div class="container">
 		<div id="profil">
 		  <div class="row">
+
 				<?php 
 					//Ha nincs get
 					if (empty($_GET['sz_id']) and empty($_GET['f_id'])) {
@@ -89,9 +90,11 @@ require 'connect.inc.php';
 								</ul>
 
 								<?php
-									$szaki_id = oci_result($szaki, 'SZ_ID');
 								
-								if (isset($_SESSION['user'])){
+								$szaki_id = oci_result($szaki, 'SZ_ID');
+								
+								//Kedvencekhez adás/törlés
+			if (isset($_SESSION['user'])){
 									$kedvenc_sql = "SELECT * FROM KEDVENCEK WHERE SZ_ID= {$_GET['sz_id']} AND F_ID=$fi_id";
 									$kedvenc = oci_parse($conn, $kedvenc_sql);
 									oci_execute($kedvenc);
@@ -121,8 +124,7 @@ require 'connect.inc.php';
 					<div class="col-md-12">
 						<h3>Értékelések:</h3>
 
-						<div ng-app="profileApp" ng-controller="ertekelescontroller">
-
+		<div ng-app="profileApp" ng-controller="ertekelescontroller">
 <?php 						//Értékeléshez összegűjtöm az adatokat
 							oci_free_statement($szaki);
 							$ert = "SELECT * FROM ERTEKELES WHERE SZ_ID = ".$_GET['sz_id'];
@@ -164,7 +166,7 @@ require 'connect.inc.php';
 									 	>
 									 	 &nbsp;Törlés&nbsp; 
 									 </a>
-
+									 <?php } } ?>
 								    </div>
 								    <div class="panel-body"><?php echo oci_result($ertekeles, 'SZOVEG'); ?></div>
 								  </div>
@@ -231,10 +233,6 @@ require 'connect.inc.php';
 
 								  </div>
 								</div>
-							<?php
-							  		}	
-							   }
-							?>
 <?php
 							 }
 							//EDDIG TART AZ ÉRTÉKELÉS

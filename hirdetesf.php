@@ -13,6 +13,9 @@ require 'core.inc.php';
 
 include 'fejlec.php';
 ?>
+<script type="text/javascript">
+	document.getElementById("igenyles").className = "active";
+</script>
 	<div class"index">
 		<div class="container">
 		<div id="profil">

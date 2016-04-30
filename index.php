@@ -1,4 +1,4 @@
-<?php 
+in<?php 
 session_start(); 
 require 'connect.inc.php';
 ?>
@@ -7,7 +7,11 @@ require 'connect.inc.php';
 <?php include 'layout.php'; ?>
 </head>
 <body>
+
 <?php include 'fejlec.php'; ?>
+<script type="text/javascript">
+	document.getElementById("index").className = "active";
+</script>
 	<div class"index">
 		<div class="container">
 		  <div class="row">

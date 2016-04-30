@@ -1,6 +1,5 @@
 var app = angular.module("profileApp" , []);
-//var app2 = angular.module("kedvencApp", []);
-	
+	//ha ebbe valaki belenyul letorom a kezet
 	app.controller("ertekelescontroller", function ($scope,$http) {
 		$scope.insertdata = function($f_id){
 			$http.post("ertekeles.php",
@@ -25,6 +24,24 @@ var app = angular.module("profileApp" , []);
 			var egesz = url1.concat(url2);
 			$http.get(egesz).then(function (response) {$scope.ertekelesek = response.data.records;});
 		}
+
+
+
+		$scope.addkedvenc = function($sz_id){
+			$http.post("kedvencekhez.php",
+				{'sz_id':$sz_id}).success(function(data,status,headers,config){
+					console.log("Sikeres hozzaadva!");
+				});
+				alert("Köszönjük az értékelését!");
+				location.reload();
+		}
+
+		$scope.delkedvenc = function($sz_id){
+			$http.post("kedvenctorles.php", {'sz_id':$sz_id}).success(function(data,status,headers,config){
+				console.log("Sikeres kedvencekből törlés!");
+			});
+		}
+
 		});
 
 
