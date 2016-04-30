@@ -46,7 +46,7 @@ include 'fejlec.php';
 					//SQL kódot futatt az adatbázisba
 					oci_execute($compiled);
 					echo $sql;
-						echo 'Sikeres igénylés!';
+						echo '<div class="alert alert-success" align="center" style="width: 300px;">Sikeres igénylés!</div>';
 					} else {echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';} }
 					}
 				?>

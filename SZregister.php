@@ -50,7 +50,7 @@ if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 		oci_bind_by_name($compiled, ':foto', $foto);
 		
 		oci_execute($compiled);
-		echo 'Sikeres regisztráció';
+		echo '<div class="alert alert-success" align="center" style="width: 300px;">Sikeres regisztráció</div>';
 	}else{
 		echo '<div class="alert alert-danger" align="center" style="width: 300px;">Kérjük töltse ki a mezőket!</div>';
 	}
