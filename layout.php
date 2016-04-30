@@ -50,4 +50,9 @@ body {
 	margin: 10px;
 	padding: 30px;
 }
+
+#myNavbar {
+	margin-top: -19px;
+
+}
 </style>

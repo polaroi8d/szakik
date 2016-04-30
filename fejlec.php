@@ -1,6 +1,6 @@
 ﻿<nav class="navbar navbar-inverse" id="myNavbar" role="navigation">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Kezdőoldal</a></li>
         <li class="last"><a href="browse.php">Böngészés</a></li>
