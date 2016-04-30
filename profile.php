@@ -77,16 +77,23 @@ require 'connect.inc.php';
 						$szaki = oci_parse($conn, $szaki_sql);
 						oci_execute($szaki);
 
-
+						$ert_atlag_sql = "SELECT AVG(PONT) AS ATLAG FROM ERTEKELES WHERE SZ_ID='{$_GET['sz_id']}'";
+						$ert_atlag = oci_parse($conn, $ert_atlag_sql);
+						oci_define_by_name($ert_atlag, 'ATLAG', $atlag);
+						oci_execute($ert_atlag);
+						oci_fetch($ert_atlag);
 						while (oci_fetch($szaki)) {
 				?>
 					<div class="col-md-6">
 						<div id="adatok">
 							<h2><?php echo oci_result($szaki, 'NEVE'); ?></h2>
+							<h4>Értékelése: <?php echo $atlag; ?></h4>
 							<p>
 								<ul>
 								<li><b>Szakterület:</b> <?php echo oci_result($szaki, 'MUNKANEV'); ?></li>
 								<li><b>Település:</b> <?php echo oci_result($szaki, 'MUNKATERULET'); ?></li>
+								<li><b>Telefonszám:</b> <?php echo oci_result($szaki, 'TELEFONSZAM'); ?></li>
+								<li><b>E-mail:</b> <?php echo oci_result($szaki, 'EMAIL'); ?></li>
 								</ul>
 
 								<?php

@@ -45,7 +45,6 @@ include 'fejlec.php';
 					oci_bind_by_name($compiled, ':munkakat', $munkakat);
 					//SQL kódot futatt az adatbázisba
 					oci_execute($compiled);
-					echo $sql;
 						echo 'Sikeres igénylés!';
 					} else {echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';} }
 					}

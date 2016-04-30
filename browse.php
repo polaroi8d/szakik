@@ -63,7 +63,7 @@ require 'connect.inc.php';
 				<div id="kereses">
 				<h3>Szaki Kereső</h3>
 				<div class="form-group">
-					<form>
+					<form >
 					<label for="terulet">Település:</label>
 					<select class="form-control" 
 							name="terulet">
@@ -90,6 +90,13 @@ require 'connect.inc.php';
 							<?php } ?>
 					</select>
 					</br>
+					 <label for="rend">Rendezés:</label>
+					  <select class="form-control" name="rend">
+					  	<option></option>
+					    <option value="1">Név</option>
+					    <option value="2">Munkakör</option>
+					  </select>
+
 					<input type="submit" class="btn btn-success" value="Keresés"></input>
 					</form>
 				</div>
@@ -117,7 +124,7 @@ require 'connect.inc.php';
 				<?php 
 						}
 
-					} elseif (!empty($_GET['terulet']) || !empty($_GET['munkanev'])) {
+					} elseif (!empty($_GET['terulet']) || !empty($_GET['munkanev']) || !empty($_GET['rend'])) {
 
 						$kereses_lekerdez = "SELECT * FROM SZAKI WHERE ";
 
@@ -132,11 +139,18 @@ require 'connect.inc.php';
 													$kereses_lekerdez .= "MUNKANEV = '{$_GET['munkanev']}'";
 												}
 
+												if(!empty($_GET['rend'])){
+													if ($_GET['rend'] == 2) {
+														$kereses_lekerdez .= " ORDER BY MUNKANEV";
+													} elseif ($_GET['rend'] == 1) {
+														$kereses_lekerdez .= " ORDER BY NEVE";
+													}
+												}
 
 						$kereses = oci_parse($conn, $kereses_lekerdez);
 						oci_execute($kereses);
 
-
+						echo $kereses_lekerdez;
 					while (oci_fetch($kereses)) {
 		
 				?>
