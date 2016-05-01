@@ -34,9 +34,13 @@ require 'connect.inc.php';
 <?php include 'layout.php'; ?>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="assets/js/uzenet.js"></script>
+
 </head>
 <body>
 <?php include 'fejlec.php'; ?>
+<script type="text/javascript">
+	document.getElementById("uzenet").className = "active";
+</script>
 	<div class="container">
 		<div id="uzenetek" ng-app="uzenetApp" ng-controller="uzenetcontroller">
 	  		<div class="row">

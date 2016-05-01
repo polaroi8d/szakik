@@ -20,10 +20,16 @@
 		if ($number_of_rows == 0)
 	{
 		$a=1;
+      echo '<li id="munkak" class="last"><a href="munkat.php">Munkák</a></li>';
+      echo '<li id="uzenet" class="last"><a href="uzenetek.php">Üzenetek</a></li>';
+
 	} else { $a=0; 
   echo '<li id="kedvenceim" class="last"><a href="kedvenceim.php">Kedvenceim</a></li>';
+  echo '<li id="uzenet" class="last"><a href="uzenetek.php">Üzenetek</a></li>'; 
 	echo '<li id="panasz" class="last"><a href="panasz.php">Panasz</a></li>';
 	echo '<li id="igenyles" class="last"><a href="hirdetesf.php">Igénylés</a></li>';
+  echo '<li id="igenylesek" class="last"><a href="igenylesek.php">Hirdetéseim</a></li>';
+
 	}
 	} else {
 		echo  '<li class="dropdown">';
