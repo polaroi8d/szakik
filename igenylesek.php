@@ -36,7 +36,7 @@ require 'connect.inc.php';
 <body>
 <?php include 'fejlec.php'; ?>
 <script type="text/javascript">
-	document.getElementById("kedvenceim").className = "active";
+	document.getElementById("igenylesek").className = "active";
 </script>
 	<div class="index">
 
