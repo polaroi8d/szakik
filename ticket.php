@@ -3,8 +3,6 @@ session_start();
 require 'connect.inc.php';
 ?>
 <html>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="assets/js/uzenet.js"></script>
 <head>
 <style type="text/css">
 
@@ -41,6 +39,11 @@ require 'connect.inc.php';
 	}
 
 </style>
+<script type="text/javascript">
+	function back() {
+		window.history.back();
+	}
+</script>
 <?php include 'layout.php'; ?>
 </head>
 <body>
@@ -98,116 +101,17 @@ require 'connect.inc.php';
 								<li><i> <h4><?php echo oci_result($igeny, 'SZOVEG'); ?> </h4></i></li>
 								<li><b>Hirdető:</b> <?php echo oci_result($hirdeto_adatok, 'NEV'); ?></li>
 								</ul>
+								<button class="btn btn-success" onclick="back()">Vissza</button>
 						</div>
 					</div>
-	
-								<?php
-
-			if (isset($_SESSION['user'])){
-						?>
-					
-
-					<?php } }  ?>
-
-					<div class="col-md-12">
-						<h3>Üzenetek:</h3>
-
-		<div ng-app="uzenetApp" ng-controller="uzenetcontroller">
-<?php 						//Értékeléshez összegűjtöm az adatokat
-							$uzenet_sql = "SELECT * FROM UZENET WHERE H_ID = ".$_GET['h_id'];
-							$uzenet = oci_parse($conn, $uzenet_sql);
-							oci_execute($uzenet);
+								<?php }  ?>
 
 
-							while (oci_fetch($uzenet)) {
-
-								$lekerdez_sql = "SELECT * FROM FELHASZNALO WHERE F_ID= ".oci_result($uzenet, 'F_ID');
-								$lekerdez = oci_parse($conn, $lekerdez_sql);
-								oci_execute($lekerdez);
-
-								if(oci_fetch($lekerdez)){
-									?> 
-
-									<div class="panel-group">
-									  <div class="panel panel-success">
-									    <div class="panel-heading">
-									    <?php
-									    $ertekelt_f_id = oci_result($uzenet, 'F_ID');
-									    $ertekelo_nev_sql = "SELECT * FROM FELHASZNALO WHERE F_ID = $ertekelt_f_id";
-										$ertekelo_nev = oci_parse($conn, $ertekelo_nev_sql);
-										oci_execute($ertekelo_nev);
-										while (oci_fetch($ertekelo_nev)) {
-									    ?>
-									    <b><?php echo oci_result($ertekelo_nev, 'NEV'); } ?></b> szerint
-									    <b style="text-align: right;"><?php echo oci_result($uzenet, 'DATUM'); ?> </b>
-									    </div>
-									    <div class="panel-body"><?php echo oci_result($uzenet, 'SZOVEG'); ?></div>
-									  </div>
-									</div>
-
-
-<?php 						} else {  //Ha szaki
-							?>
-									<div class="panel-group">
-									  <div class="panel panel-default">
-									    <div class="panel-heading">
-									    <?php
-									    $uzenet_f_id = oci_result($uzenet, 'F_ID');
-									    $uzenet_nev_sql = "SELECT * FROM SZAKI WHERE SZ_ID = $uzenet_f_id";
-										$uzenet_nev = oci_parse($conn, $uzenet_nev_sql);
-										oci_execute($uzenet_nev);
-										while (oci_fetch($uzenet_nev)) {
-									    ?>
-									    <b><?php echo oci_result($uzenet_nev, 'NEVE'); } ?></b> szerint
-									    <b style="text-align: right;"><?php echo oci_result($uzenet, 'DATUM'); ?> </b>
-									    </div>
-									    <div class="panel-body"><?php echo oci_result($uzenet, 'SZOVEG'); ?></div>
-									  </div>
-									</div>
-<?php
-								
-							}
-							 }
-							//EDDIG TART AZ ÉRTÉKELÉS
-		
-						if(isset($_SESSION['user'])){
-						 	$sz_id_post_sql = "SELECT SZ_ID FROM SZAKI WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
-						 	$sz_id_post = oci_parse($conn, $sz_id_post_sql);
-						 	echo $sz_id_post_sql;
-						 	oci_execute($sz_id_post);							
-
-
-						 	if(oci_fetch($sz_id_post)){
-						 ?>
-						 <h4>Válasz:</h4>
-							<form class="form-group">
-							 		<textarea class="form-control" rows="3" name="uzenet" ng-model = "uzenet"></textarea>
-							 		<br>
-							 		<input 	type="submit" 
-							 				class="btn btn-success" 
-							 				value="Küldés" 
-							 				ng-click="insertdata(<?php echo $_GET['h_id']; ?>, <?php echo oci_result($sz_id_post, 'SZ_ID');?> , <?php echo oci_result($igeny, 'F_ID') ?>)"/>
-						 </form>
-						 <?php } else {
-						 	$f_id_post_sql = "SELECT SZ_ID FROM FELHASZNALO WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
-						 	$f_id_post = oci_parse($conn, $sz_id_post_sql);
-						 	echo $f_id_post_sql;
-						 	oci_execute($f_id_post);
-						 	while (oci_fetch($f_id_post)) {
-						 		$f_id_ka = oci_result($f_id_post, 'F_ID');	
-						 	}
-
-						 	if ($f_id_ka == oci_result($igeny, 'F_ID')) {
-						 		# code...
-						 	}
-
-						 	} ?>
-						</div>
 
 						 
 						</div>
 						
-						<?php  } }
+						<?php  } 
 						 	?>
 						 	</div>
 				<?php

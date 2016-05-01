@@ -45,7 +45,7 @@ require 'connect.inc.php';
 </head>
 <body>
 <?php include 'fejlec.php'; ?>
-	<div class"index">
+	<div class="index">
 		<div class="container">
 		<div id="profil">
 		  <div class="row">
@@ -98,13 +98,14 @@ require 'connect.inc.php';
 
 								<?php
 								
+			if (isset($_SESSION['user'])){
 								$szaki_id = oci_result($szaki, 'SZ_ID');
 								$kedvenc_jog_sql = "SELECT * FROM FELHASZNALO WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
 								$kedvenc_jog = oci_parse($conn, $kedvenc_jog_sql);
 								oci_execute($kedvenc_jog);
 
 								//Kedvencekhez adás/törlés
-			if (isset($_SESSION['user'])){
+
 								if(oci_fetch($kedvenc_jog)){
 									$kedvenc_sql = "SELECT * FROM KEDVENCEK WHERE SZ_ID= {$_GET['sz_id']} AND F_ID=$fi_id";
 									$kedvenc = oci_parse($conn, $kedvenc_sql);

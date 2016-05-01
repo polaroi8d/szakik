@@ -30,13 +30,16 @@ require 'connect.inc.php';
 
 </style>
 <?php include 'layout.php'; ?>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="assets/js/uzenet.js"></script>
 </head>
 <body>
 <?php include 'fejlec.php'; ?>
 <script type="text/javascript">
 	document.getElementById("kedvenceim").className = "active";
 </script>
-	<div class"index">
+	<div class="index">
+
 		<div class="container">
 		  <div class="row">
 				<?php

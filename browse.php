@@ -150,7 +150,6 @@ require 'connect.inc.php';
 						$kereses = oci_parse($conn, $kereses_lekerdez);
 						oci_execute($kereses);
 
-						echo $kereses_lekerdez;
 					while (oci_fetch($kereses)) {
 		
 				?>
