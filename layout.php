@@ -10,9 +10,14 @@
 	<!--main css importálás-->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <title> Szakik.hu - Ki ne akarna egy jó szakembert? </title>
-<style>
+<?php
+  $bg = array('bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg' ); 
+  $i = rand(0, count($bg)-1); 
+  $selectedBg = "$bg[$i]"; 
+?>
+<style type="text/css">
 body {
-	background-image: url('assets/img/bg-01.jpg');
+	background: url(assets/img/<?php echo $selectedBg; ?>) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

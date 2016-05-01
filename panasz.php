@@ -38,7 +38,7 @@ require 'panaszform.php';
 	oci_bind_by_name($compiled, ':id', $my_info);
 	oci_execute($compiled);
 	echo $sql;
-		echo 'Sikeres panasz küldés!';
+		echo '<div class="alert alert-success" align="center" style="width: 300px;">Sikeres panasz küldés!</div>';
 	} else {echo '<div class="alert alert-danger" align="center" style="width:300px;">Kérjük töltse ki a mezőket!<div>';} }
 	
 	}
