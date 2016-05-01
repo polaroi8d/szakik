@@ -252,6 +252,9 @@ require 'connect.inc.php';
 							//EDDIG TART AZ ÉRTÉKELÉS
 		
 						if(isset($_SESSION['user'])){
+								$kedvenc_jog_sql = "SELECT * FROM FELHASZNALO WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
+								$kedvenc_jog = oci_parse($conn, $kedvenc_jog_sql);
+								oci_execute($kedvenc_jog);
 							if(oci_fetch($kedvenc_jog)) {
 						 ?>
 						 <h4>Értékelje Ön is:</h4>
@@ -300,12 +303,12 @@ require 'connect.inc.php';
 						 
 						</div>
 						
-						<?php } }
+						<?php } } 
 						 	?>
 						 	</div>
 				<?php
 					//felhasználó id bekérése url-ből, 	
-				 	} elseif(!empty($_GET['f_id'])){
+				 	 } elseif(!empty($_GET['f_id'])){
 				 		//TODO: felhasználó profil megjelenítés
 				 ?>
 				 		<div class="alert alert-warning">
