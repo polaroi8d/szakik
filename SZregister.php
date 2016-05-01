@@ -33,10 +33,11 @@ if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 	$phonenumber = $_POST['telsz'];
 	$munka = $_POST['munka'];
 	$cim = $_POST['cim'];
+	$tipus = 'normal';
 
 	if(!empty($name) && !empty($munka) && !empty($username)&& !empty ($password) && !empty ($email) && !empty ($phonenumber) && !empty ($cim)){
-		$sql = 'INSERT INTO SZAKI (MUNKANEV,NEVE, FELHASZNALONEV,JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS ) '.
-		   'VALUES( :munka,:name, :username,:pwd, :phonenumber,:email,:foto, :cim, normal)';
+		$sql = "INSERT INTO SZAKI (MUNKANEV,NEVE, FELHASZNALONEV, JELSZO, TELEFONSZAM, EMAIL, FOTO, MUNKATERULET, TIPUS )
+		   VALUES(:munka,:name, :username,:pwd, :phonenumber,:email,:foto, :cim, 'normal')";
 
 		$compiled = oci_parse($conn, $sql);
 
@@ -50,7 +51,7 @@ if(isset($_POST['teljesnev'])&&isset($_POST['jelszo'])){
 		oci_bind_by_name($compiled, ':foto', $foto);
 		
 		oci_execute($compiled);
-		echo '<div class="alert alert-success" align="center" style="width: 300px;">Sikeres regisztráció</div>';
+		echo 'Sikeres regisztráció';
 	}else{
 		echo '<div class="alert alert-danger" align="center" style="width: 300px;">Kérjük töltse ki a mezőket!</div>';
 	}
