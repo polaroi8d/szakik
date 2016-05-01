@@ -10,6 +10,13 @@ var app = angular.module("profileApp" , []);
 				location.reload();
 		}
 
+		$scope.editert = function($e_id){
+			$http.post("e_szerk.php", {'e_id':$e_id, 'szoveg':$scope.eszoveg, 'pont':$scope.epont}).success(function(data,status,headers,config){
+				console.log("Sikeres frissítés");
+			});
+			location.reload();
+		}
+
 		$scope.deletedata =function($e_id){
 			$http.post("delertekeles.php" , {'e_id':$e_id}).success(function(data,status,headers,config){
 				consol.log("Sikeres értékelés törlés!");
