@@ -13,7 +13,7 @@
 			<input type="text" class="form-control" name="telsz"><br>
 			Munka megnevezése<font color=red>*</font>:<br>
 			<input type="text" class="form-control" name="munka"><br>
-			Munka körzete(megye)<font color=red>*</font><br>
+			Munka körzete(város)<font color=red>*</font><br>
 			<input type="text" class="form-control" name="cim"><br>
 			Foto-link:<br>
 			<input type="text" class="form-control" name="foto"><br>
