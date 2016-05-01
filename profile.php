@@ -163,6 +163,9 @@ require 'connect.inc.php';
 								    <b><?php echo oci_result($ertekeles, 'PONT'); ?> </b> pontos
 								    <?php
 									    if (isset($_SESSION['user'])){
+											$kedvenc_jog_sql = "SELECT * FROM FELHASZNALO WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
+												$kedvenc_jog = oci_parse($conn, $kedvenc_jog_sql);
+												oci_execute($kedvenc_jog);
 									    if(oci_fetch($kedvenc_jog)) {
 									    	if ($ertekelt_f_id == $fi_id) {
 									    
@@ -211,7 +214,8 @@ require 'connect.inc.php';
 														2
 
 												<input 	type="radio" 
-														name="pont" 
+														name="epont"
+														ng-model = "epont" 
 														value="3"/>
 														3
 			
@@ -232,12 +236,12 @@ require 'connect.inc.php';
 									 					rows="3" 
 									 					name="eszoveg" 
 									 					ng-model = "eszoveg"
-									 					><?php echo oci_result($ertekeles, 'SZOVEG'); ?></textarea>
+									 					></textarea>
 									 		<br/>
-									 		<input 	type="submit" 
+									 		<input 	
 									 				class="btn btn-success" 
 									 				value="Küldés" 
-									 				ng-click=""/>
+									 				ng-click="editert(<?php echo oci_result($ertekeles, 'E_ID'); ?>)"/>
 								        </form>
 								      </div>
 								      <div class="modal-footer">
