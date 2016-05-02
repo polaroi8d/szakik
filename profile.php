@@ -87,7 +87,7 @@ require 'connect.inc.php';
 					<div class="col-md-6">
 						<div id="adatok">
 							<h2><?php echo oci_result($szaki, 'NEVE'); ?></h2>
-							<h4>Értékelése: <?php echo $atlag; ?></h4>
+							<h4>Értékelése: <?php echo round($atlag,2); ?></h4>
 							<p>
 								<ul>
 								<li><b>Szakterület:</b> <?php echo oci_result($szaki, 'MUNKANEV'); ?></li>

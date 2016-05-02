@@ -136,7 +136,7 @@ body {
 <body>
 <?php include 'fejlec.php'; ?>
 <script type="text/javascript">
-	//document.getElementById("elofizetes").className = "active";
+	document.getElementById("elofizetes").className = "active";
 </script>
 	<div class"index">
 		<div class="container">

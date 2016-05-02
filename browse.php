@@ -50,7 +50,7 @@ require 'connect.inc.php';
 		<div class="container">
 		  <div class="row">
 				<?php 
-					$sql = 'SELECT * FROM SZAKI';
+					$sql = 'SELECT * FROM SZAKI MINUS (SELECT * FROM SZAKI WHERE SZ_ID = (SELECT SZ_ID FROM FIZETES WHERE SZAKI.SZ_ID=FIZETES.SZ_ID))';
 					$terulet_sql = 'SELECT DISTINCT MUNKATERULET FROM SZAKI';
 					$munkanev_sql = 'SELECT DISTINCT MUNKANEV FROM SZAKI';
 					$szakik = oci_parse($conn, $sql);
@@ -95,6 +95,7 @@ require 'connect.inc.php';
 					  	<option></option>
 					    <option value="1">Név</option>
 					    <option value="2">Munkakör</option>
+					    <option value="3">Értékelés</option>
 					  </select>
 
 					<input type="submit" class="btn btn-success" value="Keresés"></input>
@@ -103,6 +104,29 @@ require 'connect.inc.php';
 				</div>
 				<?php
 					if(empty($_GET) || (empty($_GET['terulet']) and empty($_GET['munkanev']) ) ) {
+					$premium_sql = "SELECT  * FROM SZAKI RIGHT OUTER JOIN FIZETES ON SZAKI.SZ_ID=FIZETES.SZ_ID ORDER BY FIZETES.OSSZEG";
+					$premium = oci_parse($conn, $premium_sql);
+					oci_execute($premium);
+					while (oci_fetch($premium)) {
+					?>
+			        		<div class="col-md-3 col-xs-3">
+								<div class="panel panel-default">
+									<ul>
+									<img src="assets/img/szakik.png" style="width: 150px; height: 150px;">
+										<b><li><?php echo oci_result($premium, 'NEVE'); ?></li></b>
+										<i><li><?php echo oci_result($premium, 'MUNKANEV'); ?></li></i>
+										<li><?php echo oci_result($premium, 'MUNKATERULET'); ?></li>
+										<a 	role="button" 
+											class="btn btn-info" 
+											href="profile.php?sz_id=<?php echo oci_result($premium, 'SZ_ID'); ?>"
+											>
+											Megtekint
+										</a>
+									</ul>
+								</div>
+							</div>
+					<?php
+					}
 						while (oci_fetch($szakik)) {
 				?>
 			        		<div class="col-md-3 col-xs-3">
@@ -144,6 +168,8 @@ require 'connect.inc.php';
 														$kereses_lekerdez .= " ORDER BY MUNKANEV";
 													} elseif ($_GET['rend'] == 1) {
 														$kereses_lekerdez .= " ORDER BY NEVE";
+													} elseif ($_GET['rend'] == 3) {
+														$kereses_lekerdez .= " ORDER BY (SELECT AVG(PONT) FROM ERTEKELES WHERE SZAKI.SZ_ID = ERTEKELES.SZ_ID) DESC";
 													}
 												}
 
