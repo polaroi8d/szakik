@@ -20,10 +20,27 @@
 		if ($number_of_rows == 0)
 	{
 		$a=1;
-      echo '<li id="munkak" class="last"><a href="munkat.php">Munkák</a></li>';
+
+        $fejl_id_sql = "SELECT SZ_ID FROM SZAKI WHERE FELHASZNALONEV = '{$_SESSION['user']}'";
+        $fejl_id_lekerdez = oci_parse($conn, $fejl_id_sql);
+        oci_execute($fejl_id_lekerdez);
+        while (oci_fetch($fejl_id_lekerdez)) {
+          $fejl_id = oci_result($fejl_id_lekerdez, 'SZ_ID');
+         }
+          $munka_sql = 'SELECT COUNT(*) AS MUNKASZAM FROM IGENYLES WHERE MUNKAKAT= (SELECT MUNKANEV FROM SZAKI WHERE SZ_ID='.$fejl_id.")";
+          $munka_szam = oci_parse($conn, $munka_sql);
+          oci_define_by_name($munka_szam, 'MUNKASZAM', $munkaszam);
+          oci_execute($munka_szam);
+          oci_fetch($munka_szam);
+      echo '<li id="munkak" class="last"><a href="munkat.php">Munkák <span class="badge">'.$munkaszam.'</span></a></li>';
+      echo '<li id="elofizetes" class="last"><a href="elofizetes.php">Előfizetés</a></li>';
       echo '<li id="uzenet" class="last"><a href="uzenetek.php">Üzenetek</a></li>';
 
+        oci_free_statement($munka_szam);
+
 	} else { $a=0; 
+
+
   echo '<li id="kedvenceim" class="last"><a href="kedvenceim.php">Kedvenceim</a></li>';
   echo '<li id="uzenet" class="last"><a href="uzenetek.php">Üzenetek</a></li>'; 
 	echo '<li id="panasz" class="last"><a href="panasz.php">Panasz</a></li>';

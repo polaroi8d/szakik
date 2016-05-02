@@ -6,7 +6,6 @@ var app = angular.module("profileApp" , []);
 				{'pont':$scope.pont, 'szoveg':$scope.szoveg, 'f_id':$f_id}).success(function(data,status,headers,config){
 					console.log("Sikeres beillesztes!");
 				});
-				alert("Köszönjük az értékelését!");
 				location.reload();
 		}
 
@@ -39,7 +38,6 @@ var app = angular.module("profileApp" , []);
 				{'sz_id':$sz_id}).success(function(data,status,headers,config){
 					console.log("Sikeres hozzaadva!");
 				});
-				alert("Köszönjük az értékelését!");
 				location.reload();
 		}
 
